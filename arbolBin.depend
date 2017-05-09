@@ -10,3 +10,14 @@
 	<cstdlib>
 	<iostream>
 
+1494314152 source:c:\users\dewey\desktop\programas\arbolbin\main.cpp
+	<iostream>
+	"ArbolBin.h"
+
+1494314152 c:\users\dewey\desktop\programas\arbolbin\include\arbolbin.h
+	<cstdlib>
+	<iostream>
+
+1494314152 source:c:\users\dewey\desktop\programas\arbolbin\src\arbolbin.cpp
+	"ArbolBin.h"
+

@@ -17,7 +17,6 @@ int main()
    cout<<endl;
    a.print();
    a.agregar(0);
-   a.eliminar(2);
    cout<<endl;
    a.print();
    return 0;
