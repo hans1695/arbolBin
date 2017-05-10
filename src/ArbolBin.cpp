@@ -13,25 +13,25 @@ void ArbolBin::destroy(Nodo *n) {
    }
 }
 
-void ArbolBin::agregar(Nodo *&root,int a){
+bool ArbolBin::agregar(Nodo *&root,int a){
    if(root != NULL){
       if(root->valor == a){
-         return;
+         return false;
       } else if(a < root->valor){
-         agregar(root->hIzq,a);
+         return agregar(root->hIzq,a);
       } else {
-         agregar(root->hDer,a);
+         return agregar(root->hDer,a);
       }
    } else {
       root = new Nodo(a);
-      return;
+      return true;
    }
 }
 
 void ArbolBin::print(Nodo *root){
    if(root != NULL){
       print(root->hIzq);
-      cout<<root->valor<<" ";
+      cout<<root->valor<<" "<<((root->hDer!=NULL)?root->hDer->valor:-1)<<" "<<((root->hIzq!=NULL)?root->hIzq->valor:-1)<<endl;
       print(root->hDer);
    }
 }
@@ -57,6 +57,8 @@ ArbolBin::Nodo* ArbolBin::eliminar(Nodo *&root,int a){
             return eliminar0(root);
          } else if((root->hDer == NULL && root->hIzq != NULL) || (root->hIzq == NULL && root->hDer != NULL)){
             return eliminar1(root);
+         } else {
+            return eliminar2(root);
          }
       } else if(a < root->valor) {
          root->hIzq = eliminar(root->hIzq,a);
@@ -83,6 +85,26 @@ ArbolBin::Nodo* ArbolBin::eliminar1(Nodo *&root){
       n = root->hDer;
    delete root;
    return n;
+}
+
+ArbolBin::Nodo* ArbolBin::eliminar2(Nodo *&root){
+   Nodo *mm = mayorMenores(root);
+   root->valor = mm->valor;
+   delete mm;
+   return root;
+}
+
+ArbolBin::Nodo* ArbolBin::mayorMenores(Nodo *&n){
+    Nodo *p = n->hIzq,*padre = NULL;
+    while(p->hDer != NULL){
+        padre = p;
+        p = p->hDer;
+    }
+    if(padre == NULL)
+        n->hIzq = p->hIzq;
+    else
+        padre->hDer = p->hIzq;
+    return p;
 }
 
 /*template <class T>

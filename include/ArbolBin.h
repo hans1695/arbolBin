@@ -19,16 +19,17 @@ public:
    ArbolBin(): raiz(NULL) {}
    virtual ~ArbolBin();
    void print() {print(raiz);}
-   void agregar(int a) {agregar(raiz,a);}
-   void eliminar(int a) {eliminar(raiz,a);}
+   bool agregar(int a) {return agregar(raiz,a);}
+   bool eliminar(int a) {return (eliminar(raiz,a) == NULL);}
 private:
-   void agregar(Nodo *&root,int a);
+   bool agregar(Nodo *&root,int a);
    void destroy(Nodo *);
    void print(Nodo *);
    Nodo* eliminar(Nodo *&root,int a);
    Nodo* eliminar0(Nodo *&root);
    Nodo* eliminar1(Nodo *&root);
    Nodo* eliminar2(Nodo *&root);
+   Nodo* mayorMenores(Nodo *&);
    Nodo* buscar(Nodo *root,int a);
    Nodo *raiz;
 };

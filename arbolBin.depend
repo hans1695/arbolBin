@@ -21,3 +21,14 @@
 1494314152 source:c:\users\dewey\desktop\programas\arbolbin\src\arbolbin.cpp
 	"ArbolBin.h"
 
+1494442102 source:c:\users\hans\desktop\arbolbin\main.cpp
+	<iostream>
+	"ArbolBin.h"
+
+1494442279 c:\users\hans\desktop\arbolbin\include\arbolbin.h
+	<cstdlib>
+	<iostream>
+
+1494441740 source:c:\users\hans\desktop\arbolbin\src\arbolbin.cpp
+	"ArbolBin.h"
+
