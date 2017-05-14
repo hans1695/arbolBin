@@ -1,20 +1,34 @@
 #include <iostream>
-#include "ArbolBin.h"
+#include "Arbolbinario.h"
+#include "ArbolAVL.h"
+#include <ctime>
 using namespace std;
 
-int main()
-{
-   ArbolBin a;
-   a.agregar(15);
-   a.agregar(7);
-   a.agregar(16);
-   a.agregar(14);
-   a.agregar(17);
-   a.agregar(13);
-   a.print();
-   cout<<endl;
-   a.eliminar(20);
-   a.print();
-   cout<<endl;
+int main() {
+   srand(time(NULL));
+   ArbolAVL a;
+   int n;
+   for(int i=0;i<50;i++){
+      n = rand()%100 + 1;
+      try{
+         a.insertar(n);
+         cout<<"Se inserto el "<<n<<endl;
+      } catch (const char *cad){
+         cout<<"No se inserto el "<<n<<endl;
+      }
+   }
+   a.imprimir();
+
+   for(int i=0;i<50;i++){
+      n = rand()%100 + 1;
+      try{
+         a.eliminar(n);
+         cout<<"Se elimino el "<<n<<endl;
+      } catch (const char *cad){
+         cout<<"No se encontro el "<<n<<endl;
+      }
+   }
+
+   a.imprimir();
    return 0;
 }

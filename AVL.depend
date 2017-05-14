@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1494708649 source:c:\users\dewey\desktop\programas\seminario irene\avl\main.cpp
+	<iostream>
+	"Arbolbinario.h"
+	"ArbolAVL.h"
+	<ctime>
+
+1494698296 source:c:\users\dewey\desktop\programas\seminario irene\avl\src\nodo.cpp
+	"Nodo.h"
+
+1494710122 c:\users\dewey\desktop\programas\seminario irene\avl\include\nodo.h
+	<cstdlib>
+
+1494706636 source:c:\users\dewey\desktop\programas\seminario irene\avl\src\arbolbinario.cpp
+	"Arbolbinario.h"
+
+1494706680 c:\users\dewey\desktop\programas\seminario irene\avl\include\arbolbinario.h
+	"Nodo.h"
+	<iostream>
+
+1494705523 source:c:\users\dewey\desktop\programas\seminario irene\avl\src\arbolavl.cpp
+	"ArbolAVL.h"
+
+1494709665 c:\users\dewey\desktop\programas\seminario irene\avl\include\arbolavl.h
+	"Arbolbinario.h"
+	"NodoAVL.h"
+
+1494709694 c:\users\dewey\desktop\programas\seminario irene\avl\include\nodoavl.h
+	"Nodo.h"
+
+1494708622 source:c:\users\dewey\desktop\programas\seminario irene\avl\src\nodoavl.cpp
+	"NodoAVL.h"
+
